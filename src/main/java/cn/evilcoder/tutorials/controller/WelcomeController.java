@@ -28,6 +28,4 @@ public class WelcomeController {
     public Object findUserById(@PathVariable(value = "userId") long userId) {
         return userService.findById(userId);
     }
-
-
 }

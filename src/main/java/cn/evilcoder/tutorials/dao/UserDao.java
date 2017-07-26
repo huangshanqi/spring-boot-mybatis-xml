@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * Created by huangshanqi on 2017/7/26.
  */
 @Repository
-public class UserDao extends BaseDao {
+public class UserDao{
 
     @Autowired
     private UserMapper userMapper;
