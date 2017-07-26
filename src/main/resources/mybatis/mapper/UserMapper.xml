@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.evilcoder.tutorials.mapper.UserMapper" >
+    <resultMap id="UserEntityMap" type="UserEntity" >
+        <id column="id" property="id" javaType="Long" />
+        <result column="username" property="username" javaType="String" />
+        <result column="password" property="password" javaType="String"/>
+    </resultMap>
+    <select id="findById" parameterType="Long" resultMap="UserEntityMap">
+        select id, username, password from t_user where id = #{id};
+    </select>
+</mapper>
